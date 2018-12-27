@@ -1,4 +1,4 @@
-[![Code Climate](https://img.shields.io/codeclimate/issues/github/me-and/mdf.svg?style=plastic)](https://gitlab.com/jahanifard/fedora_book)
+[![Code Climate](https://img.shields.io/codeclimate/issues/github/me-and/mdf.svg?style=plastic)](https://github.com/arjahanifard/fedora_book/issues)
 <div dir="rtl">
  <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fa"><img alt="مجوز کریتیو کامنز" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />این کار مجوز دارد تحت <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fa">مجوز کریتیو کامنز نسبت‌دادن-غیرتجاری-بدون انشقاق 4.0 بین‌المللی</a>.
 
@@ -21,12 +21,12 @@
 اون در اختیار بقیه قرار گرفته که امکان ویرایش نیست!!!!!!!!
 
 لطفا نظرات و پیشنهادات یا اگر مشکلی در جایی از کتاب مشاهده میکنید حتما من رو
-[در جریان بزارید](https://gitlab.com/jahanifard/fedora_book/issues
+[در جریان بزارید](https://github.com/arjahanifard/fedora_book/issues
 )
 چون این کتاب هدفش کمک به جامعه گنو/لینوکس هست و اگر شما هم اگر پیشنهادات و مشکلات کتاب را گزارش بدین مطمئنا کتابی بهتر برای این جامعه آماده میشه پس منتظر نظراتتون هستم
 >  سوال: چطور میتوانم سوال یا مشکل پیش امده را پیرامون پروژه مطرح کنم؟
 
-جواب: در [اینجا](https://gitlab.com/jahanifard/fedora_book/issues) میتوانید سوال یا مشکل را مطرح نمایید
+جواب: در [اینجا](https://github.com/arjahanifard/fedora_book/issues) میتوانید سوال یا مشکل را مطرح نمایید
 
 --------
 #### هرگونه کپی برداری یا استفاده تجاری از این اثر مجاز نیست
