@@ -1,0 +1,447 @@
+\chapter{نصب فدورا}\label{ch-2}
+\section{دانلود و آماده سازی اولیه}\label{se-21}
+در این قسمت با توجه علاقه خود از بین میزکارهای موجود در آدرس زیر 
+\begin{flushleft}
+\href{https://spins.fedoraproject.org/}{http://opizo.com/TWDNnG}
+\end{flushleft}
+یکی را انتخاب کنید.
+\tcbset{before title={\textcolor{yellow}{\large توجه:}~},
+	colback=green!5!white,colframe=red!75!black,fonttitle=\bfseries}
+\begin{tcolorbox}[title=انتخاب میزکار]
+	\textbf{میزکار}
+	مورد استفاده این کتاب \index{xfce} xfce است پیشنهاد میکنم برای رفع مشکلات احتمالی شما هم از همین میزکار استفاده کنید. برای دانلود آخرین نسخه فدورا با میزکار xfce به لینک زیر مراجعه کنید.
+	\begin{flushleft}
+		\href{https://spins.fedoraproject.org/xfce/download/index.html}{http://opizo.com/nA3681}
+	\end{flushleft}
+\end{tcolorbox}
+\subsection{نحوه نصب بر روی DVD}\label{se-211}\index{dvd}
+بعد از دانلود ISO ی 
+\index{iso}
+مناسب, آن را روی یک دیسک نوری خام بنویسید. سیستم عامل های مختلف ابزراهای متفاوتی برای اینکار دارند.
+\begin{itemize}
+	\item \textbf{در ویندوز}\label{amozesh-windows1}\index{ویندوز}
+	میتوان از
+	\mybox[blue]{UltraISO}  
+	\index{UltraISO}
+	استفاده کرد برای دانلود برنامه به لینک زیر مراجعه کنید
+	\begin{flushleft}
+		\href{http://shatelland.com/key/34533}{http://opizo.com/yTYanw}
+	\end{flushleft}
+طریقه کار با این برنامه را میتوانید در ویدیویی در آپارت ببینید برای دیدن این ویدیو پیشنهاد میکنم به لینک زیر مراجعه کنید.
+\begin{flushleft}
+	\href{https://www.aparat.com/v/46xJD/%D8%A2%D9%85%D9%88%D8%B2%D8%B4_ultra_iso}{http://opizo.com/A4RDZE}
+\end{flushleft}
+\item \textbf{در مک}\index{مک}\label{amozesh-mac1}
+این سیستم عامل به صورت پیش فرض ابزار
+\mybox[blue]{Disk Utility}
+را دارد که در مسیر:
+\begin{flushleft}
+\begin{tikzcd}
+	Applications \ar[r, red] & Utilities \ar[r , red] & Disk utility
+\end{tikzcd}
+\end{flushleft}
+قابل دسترس است. ابزار
+\lr{\textbf{Disk Utility}}%chap chin kardan jomalat latin
+را اجرا و iso را به قاب سمت چپ بکشید. بعد از زدن تیک 
+\lr{\textbf{Verify burned data}}%chap chin kardan jomalat latin
+\index{iso}\index{\lr{Disk Utility}}%baray jologiri az 2 kalame shodan dar namaye
+, روی 
+\textbf{Burn} 
+کلیک کنید.
+\item \textbf{در گنو/لینوکس}\index{گنو/لینوکس}\label{amozesh-gnu-linux1}
+کاربران گنو/لینوکس نیز میتوانند از
+\mybox[blue]{Brasero}
+استفاده کنند.
+\end{itemize}
+\subsection{نحوه نصب بر روی USB}\label{se-212}\index{usb}
+\begin{itemize}
+	\item \textbf{در ویندوز}\index{ویندوز}\label{amozesh-windows-2}
+	میتوان از 
+	\mybox[blue]{rufus}
+	استفاده کرد.  نوع توزیع (فدورا) و محل فایل iso دانلود شده را به نرم افزار بدهید و درایو حافظه فلش را مشخص کنید .کار با این ابزار بسیار ساده است.برای دانلود میتوانید به لینک زیر مراجعه کنید.تصویر 
+	\ref{pic-1}
+	را ببینید.
+\begin{flushleft}
+	\href{http://linuxfedora.ir.uploadboy.me/p2y1j2jf5c0e/rufus-2.18.exe.html
+	}{http://opizo.com/UbzANk}
+\end{flushleft}
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{تصویری از محیط rufus}
+	\begin{center}
+		\includegraphics[width=8cm]{pic/ch03/ch03-1.png}
+	\end{center}
+	\label{pic-1}
+\end{figure}
+\item \textbf{در مک}\index{مک}\label{amozesh-mac2}
+به کاربران 
+\textbf{OS X}
+توصیه میشود که از
+\textbf{CD}
+یا
+\textbf{DVD}
+استفاده کنند. زیرا رایانه 
+\textbf{OS X}
+آنها قابلیت راه اندازی از راه فایل های
+\textbf{iso}
+را ندارد.
+\item \textbf{در گنو/لینوکس}\index{گنو/لینوکس}\label{amozesh-gnu-linux2}
+میتوان از 
+\lr{\mybox[blue]{gnome multi writer}}%chap chin kardan jomalat latin	
+	(روی تمام توزیع ها) استفاده کرد.تصویر \ref{pic-2}  را ببینید
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{تصویری از محیط gnome multi writer}
+	\begin{center}
+\includegraphics[width=8cm]{pic/ch03/ch03-2.jpg}
+	\end{center}
+\label{pic-2}
+\end{figure}
+\end{itemize}
+\section{نصب و راه اندازی}\label{se-22}
+بعد از ریختن فدورا روی
+\textbf{DVD}
+یا
+\textbf{USB}
+, باید آن را بوت کنید. برای بوت کردن از راه دی وی دی یا یو اس بی, باید به دفترچه مادربورد رایانه تان مراجعه کنید یا در اینترنت جستجو کنید. بعد از اینکه رایانه را با فدورا بوت کردید, دو انتخاب پیش رو دارید:
+\cite{install-fedora}
+\begin{itemize}
+	\item \textbf{انتخاب اول} 
+	نصب فدورا 
+	\item \textbf{انتخاب دوم}
+	امتحان کردن فدورا
+	شکل
+\ref{pic-3}	
+	را ببینید.
+\end{itemize}
+با انتخاب گزینه دوم, شما در هر زمان که تمایل به نصب داشتید میتوانید با کلیک بر روی آیکون نصب فدورا آن را نصب کنید.شکل 
+\ref{pic-3-1}
+را ببینید.
+\LTRfootnote{install to Hard Drive}
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{ انتخاب نوع نصب فدورا}
+	\begin{center}
+		\includegraphics[width=7cm]{pic/ch03/ch03-3.png}
+	\end{center}
+	\label{pic-3}
+\end{figure}
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{ نصب فدورا}
+	\begin{center}
+		\includegraphics[width=7cm]{pic/ch03/ch03-31.png}
+	\end{center}
+	\label{pic-3-1}
+\end{figure}
+در گام بعد اقدام به انتخاب زبان خود نمایید همانند شکل
+\ref{pic-4}
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{ انتخاب نوع زبان }
+	\begin{center}
+		\includegraphics[width=8cm]{pic/ch03/ch03-4.jpg}
+	\end{center}
+	\label{pic-4}
+\end{figure}
+در قسمت بعدی مواردی را مشاهده می کنید که تنظیم کردن برخی از آنها اختیاری می باشد و بعد از نصب می توانید آنها را انجام دهید ولی آنهایی که با علامت مثلث نارنجی رنگ مشخص شده اند را باید حتما تنظیم کنید.
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	%\caption{ انتخاب نوع زبان }
+	\begin{center}
+		\includegraphics[width=7cm]{pic/ch03/ch03-5.jpg}
+	\end{center}
+	\label{pic-5}
+\end{figure}
+
+به هر حال به عنوان نمونه برای تنظیم موقعیت جغرافیایی ، تاریخ و زمان کافی است تا روی قسمت  
+\textbf{data\&time}
+کلیک کرده تا تصویر
+\ref{pic-6}
+   را ببینید و تنظیمات مورد نظر خود را اعمال کنید .
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{ انتخاب موقعیت جفراقیایی }
+	\begin{center}
+		\includegraphics[width=5cm]{pic/ch03/ch03-6.jpg}
+	\end{center}
+	\label{pic-6}
+\end{figure}
+پس از تنظیم ساعت و تاریخ روی دکمه 
+\textbf{Done}
+ کلیک کرده تا به صفحه اصلی تنظیمات برگردید و پس از آن روی قسمت 
+ \textbf{Keyboard}
+  کلیک می کنیم تا وارد صفحه ای مشابه تصویر
+  \ref{pic-7}
+ شویم
+  \begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+  	\caption{ انتخاب صفحه کلید }
+  	\begin{center}
+  		\includegraphics[width=6cm]{pic/ch03/ch03-7.jpg}
+  	\end{center}
+  	\label{pic-7}
+  \end{figure}
+همانطور که در تصویر بالا مشخص شده است 
+با کلیک کردن بر روی دکمه مثبت 
+\textbf{(+)} 
+می توانید زبان دیگری اضافه کنید (زبان پارسی)  و با کلیک کردن بر روی دکمه  \textbf{Options}
+می توانید کلید میانبر برای سوئیچ کردن بین زبان ها انتخاب کنید که این روش ها را به ترتیب در تصاویر 
+\ref{pic-8}
+و
+\ref{pic-9}
+مشاهده میکنید
+  \begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{ انتخاب کلید میانبر صفحه کلید ۱}
+	\begin{center}
+		\includegraphics[width=6cm]{pic/ch03/ch03-8.png}
+	\end{center}
+	\label{pic-8}
+\end{figure}
+  \begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{ انتخاب کلید میانبر صفحه کلید ۲}
+	\begin{center}
+		\includegraphics[width=6cm]{pic/ch03/ch03-9.png}
+	\end{center}
+	\label{pic-9}
+\end{figure}
+پس از تنظیمات صفحه کلید روی دکمه  \textbf{Done} کلیک کنید تا به صفحه اصلی تنظیمات برگردید.در این  مرحله روی قسمت
+\lr{\textbf{installtion destination}}%chap chin kardan jomalat latin
+کلیک می کنیم تا وارد صفحه ی زیر شویم و سپس برروی
+ \textbf{Custom} 
+ و بعد بر روی 
+ \textbf{Done} 
+ کلیک می کنیم.
+ \begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{ مکان نصب}
+	\begin{center}
+		\includegraphics[width=7cm]{pic/ch03/ch03-10.jpg}
+	\end{center}
+	\label{pic-10}
+\end{figure}
+پارتیشنی که قرار است فدورا را در آن نصب کنید انتخاب کنید و گزینه 
+\textbf{reformat}
+ رو تیک بزنید و فرمت 
+ \textbf{ext4}\index{\lr{ext4}}
+  را انتخاب کنید و در قسمت 
+  \lr{\textbf{mount point}}%chap chin kardan jomalat latin
+    علامت 
+   \textbf{/}
+    رو تایپ کنید و برروی گزینه ی 
+    \lr{\textbf{Update setting}}%chap chin kardan jomalat latin     
+     کلیک نمایید.تصویر
+     \ref{pic-11}
+     را مشاهده کنید
+  \begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+ 	\caption{پارتیشن بندی}
+ 	\begin{center}
+ 		\includegraphics[width=7cm]{pic/ch03/ch03-11.png}
+ 	\end{center}
+ 	\label{pic-11}
+ \end{figure}  
+  حال پارتیشن 
+  \textbf{swap}
+   را انتخاب نمایید و تیک 
+   \textbf{reformat}
+   را فعال کنید و 
+      \lr{\textbf{Update setting}}%chap chin kardan jomalat latin     
+    را بزنید.
+    حال برروی 
+    \textbf{Done}
+     کلیک نمایید تا به صفحه ی زیر بازگردید اگر مراحل پارتیشن بندی را درست انجام داده باشید گزینه  
+          \lr{\textbf{Begin Install}}%chap chin kardan jomalat latin          
+      فعال خواهد بود. برای نصب برروی ‌
+          \lr{\textbf{Begin Install}}%chap chin kardan jomalat latin          
+       کلیک نمایید.
+       \footnote{در صورت هرگونه سوال یا مشکل میتوانید به گروه پرسش و پاسخ همین کتاب به آدرس زیر در واتس آپ مراجعه کنید
+   \href{https://chat.whatsapp.com/6Z5uenUNLfr7lybFa5JU48}{http://opizo.com/jcCxLs}    
+   }
+ \begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{نصب}
+	\begin{center}
+		\includegraphics[width=7cm]{pic/ch03/ch03-12.jpg}
+	\end{center}
+	\label{pic-12}
+\end{figure}  
+در حین عملیات نصب باید برای 
+\textbf{root}\index{root}
+ پسورد بذارید برای اینکار برروی 
+ \textbf{Root Password }\index{\lr{Root Password}}%baray jologiri az 2 kalame shodan dar namaye
+ کلیک نمایید.تصاویر
+ \ref{pic-13}
+ و
+ \ref{pic-14}
+ را مشاهده کنید. 
+  \begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+ 	\caption{تنظیمات کاربر}
+ 	\begin{center}
+ 		\includegraphics[width=7cm]{pic/ch03/ch03-13.jpg}
+ 	\end{center}
+ 	\label{pic-13}
+ \end{figure}   
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{پسورد روت}
+	\begin{center}
+		\includegraphics[width=7cm]{pic/ch03/ch03-14.jpg}
+	\end{center}
+	\label{pic-14}
+\end{figure}    
+بعد از تایپ پسورد برروی 
+ \textbf{Done}
+ کلیک نمایید.
+ بر روی بخش 
+ \lr{\textbf{User Creation}}
+ کلیک کنید و مشخصات کاربری خود را وارد کنید تا از این به بعد با این مشخصات به سیستم وارد شوید.توجه داشته باشید 
+  \lr{\textbf{Full Name }} 
+ جهت نمایش حساب شماست،ولی 
+   \lr{\textbf{ User Name }} 
+ نامی است که شما با آن به سیستم 
+ \textbf{Login}
+  می کنید.   
+ بعد از تکمیل مشخصات روی دکمه 
+  \textbf{Done}
+  کلیک کنید .
+  \tcbset{before title={\textcolor{yellow}{\large توجه:}~},
+  	colback=green!5!white,colframe=red!75!black,fonttitle=\bfseries}
+  \begin{tcolorbox}
+
+حتما ۲ گزینه زیر را همانند تصویر
+\ref{pic-15} \label{user-name}
+تیک دار نمایید تا امکان استفاده از 
+\textbf{sudo}\index{sudo}
+را داشته باشید.
+\begin{LTR}
+\begin{itemize}
+	\item \lr{Make this user administrator}
+	\item \lr{Require a password to use this account}
+\end{itemize}
+\end{LTR}
+  \end{tcolorbox}  
+  \begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+  	\caption{تعریف نام کاربری}
+  	\begin{center}
+  		\includegraphics[width=7cm]{pic/ch03/ch03-15.jpg}
+  	\end{center}
+  	\label{pic-15}
+  \end{figure} 
+حال صبر کنید تا عملیات نصب به پایان برسد. به محض اتمام نصب با تصویر
+\ref{pic-16}
+روبرو میشوید که با کلیک بر روی 
+\textbf{Quit}
+سیستم شما ریستارت میشود و میتوانید از فدورا استفاده کنید.
+ \begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{پایان نصب}
+	\begin{center}
+		\includegraphics[width=7cm]{pic/ch03/ch03-16.jpg}
+	\end{center}
+	\label{pic-16}
+\end{figure} 
+\section{اقدامات اولیه بعد از نصب}\label{se-23}
+در این مرحله سعی داریم اقدامات اولیه بعد از نصب فدورا  را به صورت قدم به قدم آموزش دهیم در صورتی که موارد آموزشی این بخش را به درستی اعمال نکنید در آموزشهای بعدی این کتاب با مشکل روبرو خواهید شد پس پیشنهاد میکنم موارد ذکر شده را گام به گام انجام دهید و در صورتی که متوجه نشدید نگران نباشید چون در ادامه کتاب به طور کامل موارد ذکر شده در این بخش را توضیح خواهیم داد.
+\footnote{در صورتی که تایپ دستورات گفته شده در این بخش برای شما سخت میباشد میتوانید به لینک زیر مراجعه کنید تا فقط دستورات را کپی و پست کنید
+	\begin{flushleft}
+		\href{http://www.linuxfedora.ir/viewtopic.php?f=9\&t=92}{http://opizo.com/cBzA48}
+	\end{flushleft}
+}
+\subsection{تعریف کاربر روت}\label{se-231}
+اگر در حین نصب فراموش کردید ۲ گزینه ذکر شده در بخش 
+\ref{user-name}
+را تعریف کنید با دستور زیر میتوانید مشکل را رفع کنید.پس کلیدهای ترکیبی
+\mybox[green]{\lr{Ctrl+Alt+t}}
+صفحه کلید را همزمان بزنید تا با یک پنجره سیاه رنگ همانند تصویر زیر روبرو شوید
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{ترمنیال}
+	\begin{center}
+		\includegraphics[width=7cm]{pic/ch03/ch03-17.png}
+	\end{center}
+	\label{pic-25}
+\end{figure} 
+کد زیر را در ترمینال با توجه به حروف بزرگ و کوچک بنویسید.
+\begin{flushleft}
+\xmybox[blue]{\lr{su -c "usermod -aG username root"}}
+\end{flushleft}
+به جای 
+\textbf{username}
+اسمی که در بخش تعریف نام کاربری مشخص کردید را بنویسید و اینتر بزنید و کلمه عبور کاربر روت را تایپ کنید. و مجددا اینتر بزنید.کار تمام است. با این پنجره زیاد کار داریم
+\subsection{به روز رسانی فدورا}\label{se-232}
+معمولا زمانی که شما فدورا را نصب میکنید نیاز به روزرسانی اولیه ای دارد تا باگ یا مشکلات امنیتی آن رفع گردد پس در ترمینال دستور زیر را تایپ و اینتر بزنید و رمز کاربری خود را وارد کنید.
+\begin{flushleft}
+	\xmybox[blue]{\lr{sudo dnf -y update}}
+\end{flushleft}
+تا فدورا به روزرسانی گردد.
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{به روزرسانی فدورا با ترمینال}
+	\begin{center}
+		\includegraphics[width=7cm]{pic/ch03/ch03-18.png}
+	\end{center}
+	\label{pic-26}
+\end{figure}
+\subsection{نصب مخازن و کدکهای تصویری} \label{se-233}
+در این بخش تصمیم داریم کدک های تصویری و صوتی را برای پخش فایلهای ویدیویی و صوتی در لینوکس فدورا نصب کنیم پس بعد از به روزرسانی کامل سیستم دستورات زیر را به ترتیب در ترمینال وارد کنید و اینتر بزنید و رمز خود را بنویسید تا هر دستور اجرا شود.
+\tcbset{before title={\textcolor{yellow}{\large توجه:}~},
+	colback=green!5!white,colframe=red!75!black,fonttitle=\bfseries}
+\begin{tcolorbox}[title=نصب مخازن و کدک صوتی و تصویری]
+	در صورتی که تایپ دستورات گفته شده در این بخش برای شما سخت میباشد میتوانید به لینک زیر مراجعه کنید تا فقط دستورات را کپی و پست کنید
+	\begin{flushleft}
+		\href{http://www.linuxfedora.ir/viewtopic.php?f=9\&t=92}{http://opizo.com/cBzA48}
+	\end{flushleft}
+\end{tcolorbox}
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{افزودن مخازن rpmfusion}
+	\begin{center}
+		\includegraphics[width=10cm]{pic/ch03/ch03-19.jpg}
+	\end{center}
+	\label{pic-27}
+\end{figure}
+تمام دستورات بالا و پایین را به حروف بزرگ و کوچک و فاصله دقت بکنید.
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{افزودن کدک های صوتی و تصویری}
+	\begin{center}
+		\includegraphics[width=13cm]{pic/ch03/ch03-20.png}
+	\end{center}
+	\label{pic-28}
+\end{figure}
+\subsection{حذف برنامه های مازاد}\label{se-234}
+ما تصمیم داریم در این قسمت برنامه هایی بلااستفاده را حذف کنیم.پس دستور زیر را در ترمینال تایپ کنید و همانند مراحل قبل اینتر بزنید و رمز خود را بزنید و مجددا اینتر بزنید تا حذف برنامه ها انجام شود.
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{حذف نرم افزارهای مازاد}
+	\begin{center}
+		\includegraphics[width=13cm]{pic/ch03/ch03-21.png}
+	\end{center}
+	\label{pic-29}
+\end{figure}
+\subsection{نصب نرم افزارهای ضروری}\label{se-235}
+در بخش پایانی تصمیم داریم نرم افزارهای کاربردی شامل لیبرآفیس - مدیریت ایمیل تاندربرد - رایت سی دی - پخش کننده ویدیو و صوت و چند برنامه کاربردی دیگر را نصب کنیم. تنها کاری که باید بکنید مجددا در همان صفحه ترمینال دستورات زیر را تایپ و اینتر بزنید در مرحله بعد کلمه عبور خود را بنویسید و مجددا اینتر بزنید خودکار تمام برنامه های فوق نصب میشوند.
+\begin{itemize}
+	\item نصب نرم افزار 
+	\textbf{gimp}\index{gimp}
+	 از این برنامه برای ویرایش عکس استفاده میشود و تقریبا معادل فتوشاپ در ویندوز است پس دستور زیر را در ترمینال تایپ کنید تا برنامه فوق نصب شود
+	 \begin{flushleft}
+	\xmybox[blue]{\lr{sudo dnf -y install gimp}}
+	 \end{flushleft}
+ \item نصب نرم افزار مدیریت ایمیل 
+ \textbf{Thunderbird}\index{thunderbird}
+  فایرفاکس که شاید بهترین برنامه در سطح خودش باشدبرای نصب آن از طریق ترمینال کد زیر را تایپ کنید
+  \begin{flushleft}
+  	\xmybox[blue]{\lr{sudo dnf -y install thunderbird}}
+  \end{flushleft}
+\item نصب نرم افزار 
+\textbf{unrar}
+ برای باز کردن و استخراج فایلهای فشرده شده با فرمت 
+ \textbf{rar}
+  پس دستور زیر را در ترمینال تایپ کنید 
+   \begin{flushleft}
+  	\xmybox[blue]{\lr{sudo dnf -y install unrar}}\index{unrar}
+  \end{flushleft}
+\item نصب نرم افزار ویدیو پلیر \index{vlc}
+\textbf{vlc}
+برای پخش انواع فیلم و  صوت بهترین در نوع خودش برای نصب آن دستور زیر را در ترمینال تایپ کنید
+   \begin{flushleft}
+	\xmybox[blue]{\lr{sudo dnf -y install vlc}}
+\end{flushleft}
+\item نصب نرم افزار لیبره آفیس معادل نرم افزار مایکروسافت آفیس در ویندوز برای نصب دستور زیر را در ترمینال تایپ کنید
+  \begin{flushleft}
+	\xmybox[blue]{\lr{sudo dnf -y install libreoffice}}\index{libreoffice}
+\end{flushleft}
+\item نصب نرم افزار رایت 
+\textbf{cd/dvd}
+ و گرفتن ایمیج از 
+\textbf{cd/dvd}
+برای نصب دستور زیر را در ترمینال تایپ کنید
+  \begin{flushleft}
+	\xmybox[blue]{\lr{sudo dnf -y install brasero}}\index{brasero}
+\end{flushleft}
+\end{itemize}
+با نصب برنامه های گفته شده در بالا این بخش تمام میشود باید متذکر شویم تمام موارد ذکر شده در بالا به طور کامل در ادامه کتاب توضیح داده خواهد شد پس نگران نباشید. 

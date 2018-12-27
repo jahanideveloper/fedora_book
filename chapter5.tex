@@ -1,0 +1,619 @@
+\chapter{اقدامات کاربردی بعد از نصب}\label{ch-4}
+\section{رمزگذاری پوشه خانه}\label{se-41}\index{encrypting}\index{رمزگذاری}
+اگر کسی دسترسی فیزیکی به رایانه شما داشته باشد, به سادگی میتواند به تمام داده های غیر رمزگذاری شما دسترسی داشته باشد.
+رمزگذاری
+\fl{\lr{ecryptfs encryption}}
+این اطمینان را به شما میدهد که در صورت دزدیده شدن لپ تاپ یا دسترسی یک کاربر غریبه به اطلاعات شما امکان استفاده از آنرا نخواهد داشت.
+
+هنگام رمزگذاری, داده ها قابل دسترسی نیست مگر اینکه شما وارد حساب کاربری خود شوید یا از طریق ترمینال دستور
+		\xmybox[blue]{\lr{ecryptfs-mount}}
+		را اجرا کنید.
+		\tcbset{before title={\textcolor{yellow}{\large توجه:}~},
+			colback=green!5!white,colframe=red!75!black,fonttitle=\bfseries}
+		\begin{tcolorbox}[title=رمزگذاری]
+	هنگامی که شما وارد حساب کاربری خود میشوید تمام فایلهای شما در دسترس قرار میگیرد مگر اینکه از حساب کاربری خود خارج یا ریستارت کنید.
+		\end{tcolorbox}
+شما میتوانید 
+	\textbf{Swapspace}\fp{
+		در بخش 
+		\ref{se-21}
+		این پارتیشن را ساختیم و برای اطلاعات بیشتر به لینک زیر مراجعه کنید
+		\href{http://www.linuxfedora.ir/viewtopic.php?f=12&t=13}{http://opizo.com/TvU2QH}
+}
+	را هم رمزگذاری کنید اما این قابلیت امکان خاموش کردن را غیرفعال میکند. حالا که شما لینوکس فدورا را نصب کرده اید و فراموش کرده اید که فضای خانگی خود را رمزگذاری کنید میتوانید طبق روش زیر اقدام کنید
+	\fp{در لینک روبرو این آموزش قرار گرفته است در صورت نیاز به آن مراجعه کنید
+\href{http://www.linuxfedora.ir/viewtopic.php?f=9&t=181}{http://opizo.com/3j7b0T}	
+}
+پس از نصب لینوکس فدورا, شما میتوانید پوشه خانگی 
+\LTRfootnote{Home Folder}
+خود را برای امنیت بیشتر رمزگذاری کنید.پس از ورود به سیستم شما قادر به رمزگذاری پوشه خانه خود نخواهید بود. بنابراین ما قصد داریم یک کاربر موقت را اضافه کنیم و سپس وقتی که کار تمام شد این کاربر موقت را حذف میکنیم.
+\fp{در صورت تمایل میتوانید به لینک زیر مراجعه کنید تا توضیحات تکمیلی در ارتباط  با رمزگذاری را دریافت کنید
+	\href{http://opizo.com/GEBZKu}{http://opizo.com/GEBZKu}}
+\begin{enumerate}\index{افزودن کاربر}\index{افزودن گروه}\index{\lr{add user}}\index{\lr{add groups}}
+	\item[\textbf{قدم اول:}] به آدرس  روبرو مراجعه کنید
+
+	\begin{tikzcd}
+	Menu \ar[r, red] & Administration\ar[r, red] & User and Groups
+	\end{tikzcd}
+	
+	در پاپ آپ باز شده رمز خود را وارد کنید و اینتر بزنید در پنجره ای که باز میشود بر روی گزینه  
+	\textbf{\lr{Add User}}
+	کلیک کنید یک نام به دلخواه به همراه کلمه عبوری را انتخاب کنید همانند تصویر 
+	\ref{pic-37}
+	و بر روی 
+	\textbf{ok}
+	کلیک کنید.
+	\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+		\caption{منوی افزودن کاربر}
+		\begin{center}
+			\includegraphics[width=8cm]{pic/ch05/ch05-1.png}
+		\end{center}
+		\label{pic-37}
+	\end{figure}
+\item[\textbf{قدم دوم:}] 
+نام کاربری ای که ساخته اید را انتخاب کنید و گزینه 
+\textbf{Properties} 
+از بالای پنجره را کلیک کنید. در پنجره باز شده بر روی تب 
+\textbf{Groups}
+کلیک کنید.
+همانند تصویر
+\ref{pic-38}
+ باید گزینه 
+\textbf{Sudo}
+را از داخل لیست پیدا و تیک دار کنید.
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{منوی افزودن گروه}
+	\begin{center}
+		\includegraphics[width=9cm]{pic/ch05/ch05-2.png}
+	\end{center}
+	\label{pic-38}
+\end{figure}
+\tcbset{before title={\textcolor{yellow}{\large توجه:}~},
+	colback=green!5!white,colframe=red!75!black,fonttitle=\bfseries}
+\begin{tcolorbox}[title=افزون گروه]
+	تاکید میکنم حتما گروه 
+	\textbf{Sudo}
+	را به کاربری جدیدی که ساختید اضافه کنید و بعد به مراحل بعدی مراجعه کنید.
+\end{tcolorbox}
+\item[\textbf{قدم سوم:}] 
+از حساب کاربری خود خارج و وارد حساب کاربری جدید شوید.
+\fp{ در بخش 
+\ref{se-33}
+توضیح دادیم چطور از حساب کاربری خود خارج شوید.
+}
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{پنجره لوگین}
+	\begin{center}
+		\includegraphics[width=4cm]{pic/ch05/ch05-3.png}
+	\end{center}
+	\label{pic-39}
+\end{figure}
+	\item[\textbf{قدم چهارم:}] 
+	یک ترمینال باز کنید و دستورات زیر را برای نصب برنامه رمزگذاری تایپ کنید.
+		\begin{flushleft}
+		\xmybox[blue]{\lr{su -c "dnf -y install ecryptfs-utils"}}
+	\end{flushleft}
+	در این مرحله به جای
+	\textbf{User}
+	نام کاربری خودتان را بنویسید.و به ترتیب هر خط را در ترمینال تایپ کنید.
+	\begin{flushleft}
+		\xmybox[cyan]{\lr{su -c "usermod -a -G ecryptfs user"}}
+		
+				\xmybox[green]{\lr{su -c "ecryptfs-migrate-home -u user"}}
+	\end{flushleft}
+	\begin{example}
+اگر به تصویر 
+\ref{pic-38}
+دقت کنید متوجه خواهید که نام کاربری پیش فرض ما
+\textbf{linuxfedora}
+است پس ما به جای کلمه 
+\textbf{user}
+نام کاربری خود را مینویسیم همانند تصویر
+\ref{pic-40}
+	\end{example}
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{رمزگذاری}
+	\begin{center}
+		\includegraphics[width=7cm]{pic/ch05/ch05-4.png}
+	\end{center}
+	\label{pic-40}
+\end{figure}	
+\item[\textbf{قدم پنجم:}] 
+هنگامی که رمزگذاری تمام شد(زمان رمزگذاری ممکن است طولانی باشد) باید از حساب کاربری جدیدی که ساختید خارج شوید.
+\textbf{ریستارت نکنید}
+\item[\textbf{قدم ششم:}] 
+به محض ورود به حساب کاربری خود ترمینال را باز کنید و دستور زیر را در آن تایپ کنید.
+	\begin{flushleft}
+	\xmybox[blue]{\lr{ecryptfs-add-passphrase}}
+\end{flushleft}
+رمز خود را وارد کنید و اینتر بزنید تصویر 
+را مشاهده کنید.
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{رمزگذاری ۲}
+	\begin{center}
+		\includegraphics[width=7cm]{pic/ch05/ch05-5.png}
+	\end{center}
+	\label{pic-41}
+\end{figure}
+\item[\textbf{قدم هفتم:}] 
+برای بررسی اینکه شما با موفقیت پوشه خانگی خود را رمزگذاری کردید دستور زیر را در ترمینال وارد کنید تصویر
+
+را ببینید.
+	\begin{flushleft}
+	\xmybox[blue]{\lr{ecryptfs-add-passphrase}}
+\end{flushleft}
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{رمزگذاری ۳}
+	\begin{center}
+		\includegraphics[width=7cm]{pic/ch05/ch05-6.png}
+	\end{center}
+	\label{pic-42}
+\end{figure}
+\item[\textbf{قدم هشتم:}] 
+در این مرحله تصمیم داریم حساب کاربری که در مراحل بالا ساختیم را حذف کنیم پس ترمینال را باز کنید و دستورهای زیر را در آن به ترتیب وارد کنید.
+		\begin{flushleft}
+		\xmybox[blue]{\lr{sudo userdel user}}
+	\end{flushleft}
+	\begin{flushleft}
+	\xmybox[green]{\lr{sudo rm -rf /home/user/}}
+\end{flushleft}
+	\begin{flushleft}
+	\xmybox[cyan]{\lr{sudo rm -rf /home/user.3redf/}}
+\end{flushleft}
+به جای
+\textbf{user}
+نام کاربری که در بالا ساختید را بنویسید اگر به تصویر 
+\ref{pic-37}
+دقت کنید بنده حساب کاربری با نام
+\textbf{phoenix}
+ساختم پس اگر تصویر
+\ref{pic-43}
+را ملاحضه کنید بنده اقدام به حذف این حساب کاربری نموده ام
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{حذف حساب کاربری}
+	\begin{center}
+		\includegraphics[width=9cm]{pic/ch05/ch05-7.png}
+	\end{center}
+	\label{pic-43}
+\end{figure}
+\tcbset{before title={\textcolor{yellow}{\large توجه:}~},
+	colback=green!5!white,colframe=red!75!black,fonttitle=\bfseries}
+\begin{tcolorbox}[title=خطر حذف اطلاعات]
+	در حین استفاده از دستورات بالا کمال احتیاط و دقت را داشته باشید که مبادا پوشه خانگی خود را حذف کنید.
+\end{tcolorbox}
+پوشه خانه شما الان باید رمزگذاری شده باشد. برای آزمایش این مورد سیستم خود را ریستارت کنید و با یک
+\textbf{cd}
+یا
+\textbf{usb}
+که بر روی آن نسخه ای از یک سیستم عامل لینوکس است راه اندازی کنید. هنگامی که در دسکتاپ زنده هستید قادر به مرور پوشه خانه خود نخواهید بود تصویر
+\ref{pic-44}
+را مشاهده کنید
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{دیسک زنده}
+	\begin{center}
+		\includegraphics[width=9cm]{pic/ch05/ch05-8.png}
+	\end{center}
+	\label{pic-44}
+\end{figure}
+\end{enumerate}
+\section{حذف دائمی فایل}\label{se-42}\index{حذف دائمی فایل}\index{\lr{Securely Erasing}}
+تصمیم داریم در این بخش طریقه حذف دائمی فایل را به شما آموزش دهیم به شکلی فایل را پاک خواهیم کرد که حتی با نرم افزارهای بازیابی اطلاعات, هم فایل ها غیرقابل برگشت باشند.
+\footnote{این آموزش در لینک روبرو در دسترس است
+\href{http://www.linuxfedora.ir/shred-t184.html\#p199}{http://opizo.com/HQo5jT}}
+\begin{enumerate}
+	\item[\textbf{قدم اول:}] 
+	پوشه خانه خود را باز کنید و از پنجره باز شده به آدرس  زیر مراجعه کنید. تصویر 
+	\ref{pic-37}
+	را مشاهده کنید.
+	
+	\begin{tikzcd}
+	Edit \ar[r, red] & Configure custom actions...
+	\end{tikzcd}
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{پاک کردن امن ۱}
+	\begin{center}
+		\includegraphics[width=6cm]{pic/ch05/ch05-9.png}
+	\end{center}
+	\label{pic-45}
+\end{figure}
+\item[\textbf{قدم دوم:}] 
+روی نماد
+\textbf{+}	
+در بالا سمت راست کلیک کنید و جزئیات زیر را همانطور که در تصویر 
+\ref{pic-46}
+ در تب 
+\textbf{Basic} 
+نشان داده شده است را وارد کنید:
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{پاک کردن امن ۲}
+	\begin{center}
+		\includegraphics[width=7cm]{pic/ch05/ch05-10.png}
+	\end{center}
+	\label{pic-46}
+\end{figure}
+\item[\textbf{قدم سوم:}] 
+در تب
+\textbf{\lr{Appearance Conditions}}
+همانند تصویر
+\ref{pic-47}
+تغییرات را اعمال کنید
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{پاک کردن امن ۳}
+	\begin{center}
+		\includegraphics[width=7cm]{pic/ch05/ch05-11.png}
+	\end{center}
+	\label{pic-47}
+\end{figure}
+بر روی 
+\textbf{ok}
+و در انتها بر روی 
+\textbf{close}
+کلیک کنید.
+حالا وقتی میخواهید یک فایل را بدون نیاز به بازیابی و به صورت دائمی و ایمن پاک کنید، روی آن فایل راست کلیک کنید و 
+\textbf{\lr{Shred file...}}
+ را انتخاب کنید.تصویر
+ \ref{pic-48}
+ را مشاهده کنید.
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{منوی راست کلیک حذف امن}
+	\begin{center}
+		\includegraphics[width=7cm]{pic/ch05/ch05-12.png}
+	\end{center}
+	\label{pic-48}
+\end{figure} 
+\end{enumerate}
+\section{تغییر زبان}\label{se-43}\index{زبان}\index{language}
+در این بخش تصمیم داریم طریقه تعویض زبان لینوکس فدورا را آموزش دهیم.
+\begin{enumerate}
+	\item[\textbf{قدم اول:}] 
+از حساب کاربری خود
+\textbf{\lr{Log Out}}
+کنید. تصاویر
+\ref{pic-49}
+و
+\ref{pic-50}
+را مشاهده کنید
+	
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{منوی برنامه}
+	\begin{center}
+		\includegraphics[width=2cm]{pic/ch05/ch05-13.png}
+	\end{center}
+	\label{pic-49}
+\end{figure}
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{خروج از حساب کاربری}
+	\begin{center}
+		\includegraphics[width=3cm]{pic/ch05/ch05-14.png}
+	\end{center}
+	\label{pic-50}
+\end{figure}
+به محض خارج شدن از حساب کاربری با تصویر
+\ref{pic-51}
+روبرو میشوید از محل مشخص شده در این تصویر کلیک کنید تا لیستی از زبانهای پشتیبانی شده برای شما نمایش داده شود به عنوان مثال ما زبان فارسی(\textbf{persian}) را انتخاب میکنیم و وارد حساب کاربری خود میشویم اگر به تصویر 
+\ref{pic-52}
+توجه کنید متوجه خواهید شد که منو راست چین و بعضی از بخش های آن فارسی شده است.
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{انتخاب زبان}
+	\begin{center}
+		\includegraphics[width=5cm]{pic/ch05/ch05-15.png}
+	\end{center}
+	\label{pic-51}
+\end{figure}
+\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{منو با زبان فارسی}
+	\begin{center}
+		\includegraphics[width=5cm]{pic/ch05/ch05-16.png}
+	\end{center}
+	\label{pic-52}
+\end{figure}
+\end{enumerate}
+\section{فعال کردن TRIM روی SSD شما}\label{se-44}\index{trim}\index{ssd}
+فعال کردن 
+\textbf{trim}
+به طور فابل توجهی عمر
+\textbf{ssd}
+شما را افزایش میدهد.در اینجا نحوه انجام این کار را در لینوکس فدورا آموزش میدهیم.
+\footnote{این آموزش در آدرس روبرو در دسترس است
+	\href{http://www.linuxfedora.ir/trim-ssd-t185.html}{http://opizo.com/uvYXpf}
+}
+\tcbset{before title={\textcolor{yellow}{\large احتیاط:}~},
+	colback=green!5!white,colframe=red!75!black,fonttitle=\bfseries}
+\begin{tcolorbox}[title=خطر بوت نشدن]
+شما بایستی فایلی که در ادامه به تغییرات بر روی آن اعمال میکنیم را با دقت بررسی کنید, چون یک کاما نادرست, فاصله یا حتی یک خط جدا باعث میشود کامپیوتر شما دیگر بوت نشود. برای صرفه جویی در وقت پیشنهاد میکنیم از فایل پشتیبان تهیه کنید و با دقت بالا موارد ذکر شده را انجام دهید
+\end{tcolorbox}
+\begin{enumerate}
+	\item[\textbf{قدم اول:}] تهیه پشتیبان از فایل
+	پس ترمینال را باز کنید و دستور زیر را در آن وارد کنید تا از فایل
+	\textbf{fstab}\index{fstab}
+	پشتیبان تهیه کنیم
+	
+			\xmybox[blue]{\lr{sudo cp /etc/fstab /etc/fstab-bak}}
+			\item[\textbf{قدم دوم:}] 
+			با ادیتور
+			\textbf{leafpad}\index{leafpad}
+			فایل را باز میکنیم تا تغییرات را اعمال کنیم پس دستور زیر را در ترمینال وارد کنید.
+			
+						\xmybox[green]{\lr{sudo leafpad /etc/fstab}}
+						
+						به محض اجرا دستور باید با پنجره ای مشابه تصویر
+						\ref{pic-53}
+						روبرو شوید.
+						\footnote{برای اطلاعات بیشتر در ارتباط با فایل
+					\textbf{fstab}	
+					پیشنهاد میکنم لینک روبرو را مشاهده کنید
+					\href{http://www.linuxfedora.ir/fstab-t87.html}{http://opizo.com/A6Tvfu}
+					}
+						\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+							\caption{فایل fstab}
+							\begin{center}
+								\includegraphics[width=8cm]{pic/ch05/ch05-17.png}
+							\end{center}
+							\label{pic-53}
+						\end{figure}
+					به جای کلمه
+					\textbf{\lr{defaults}}
+					شما باید کلمه
+					\textbf{discard}
+					را بنویسید و برای خطی که کلمه
+					\textbf{swap}
+					دارد این کار را انجام
+					\textbf{ندهید}
+					\tcbset{before title={\textcolor{yellow}{\large توجه:}~},
+						colback=green!5!white,colframe=red!75!black,fonttitle=\bfseries}
+					\begin{tcolorbox}[title=هاردهای IDE]
+						در مورد پارتیشن ها یا درایوهایی که ssd نیستند به هیچ عنوان قرار ندهید.
+						\textbf{IDE}\index{ide}
+						یا دیسک سخت معمولی
+					\end{tcolorbox}
+				به تصویر
+				\ref{pic-54}
+				دقت کنید که در کجا ما کلمه
+									\textbf{discard}
+									را اضافه کردیم
+									\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+										\caption{فایل fstab}
+										\begin{center}
+											\includegraphics[width=8cm]{pic/ch05/ch05-18.png}
+										\end{center}
+										\label{pic-54}
+									\end{figure}								
+\end{enumerate}
+\section{درایوها و پارتیشن ها}\label{se-45}\index{درایو}\index{پارتیشن}
+به ازای هر دیسک و هر پارتیشن یک فایل در 
+\textbf{\lr{/dev}}
+ وجود دارد. اما کدام فایل ها در
+ \textbf{\lr{/dev}}
+  مربوط به دیسک ها و پارتیشن ها هستند؟
+  
+   برای پاسخ دادن به این سوال باید با نحوه نام گذاری دیسک ها در لینوکس آشنا شویم.
+
+فایل هایی مثل :
+\textbf{\lr{cdrom, dvd, sr0}}
+  یکسان بوده و مربوط به دستگاه 
+  \textbf{DVD}
+   شما هستند.
+
+\textbf{اما هارددیسک ها بصورت زیر نام گذاری می شوند:}
+
+اگر هارد شما از نوع قدیمی 
+\textbf{(PATA)}
+باشد هاردهایی که به 
+\textbf{IDE}
+ معروفند با 
+ \textbf{hd}
+  شروع می شوند و فرمت کلی آنها 
+  \textbf{hdXY}
+   است
+   \textbf{ X }
+   یک کاراکتر الفبایی است و از 
+   \textbf{a}
+    شروع می شود و تا 
+    \textbf{z }
+    می تواند ادامه یابد 
+    \textbf{X}
+     در واقع شماره هارد شماست. اگر یک هارد داشته باشید نام هارد شما 
+     \textbf{hda}
+      میشود و اگر بیش از یک هارد داشته باشید هارد اول 
+      \textbf{hda}
+       هارد دوم 
+       \textbf{hdb}
+        و الی آخر نام گذاری میشوند. 
+        \textbf{Y}
+         شماره پارتیشن های هارد را مشخص میکند و از یک شروع میشود و ادامه پیدا میکند.
+
+اگر هارد از نوع 
+\textbf{SATA}
+ است نام گذاری با 
+ \textbf{sd }
+ شروع میشود و فرمت کلی آن 
+ \textbf{sdXY}
+  است که 
+   \textbf{X}
+   مانند حالت قبل شماره دیسک و 
+   \textbf{Y}
+    شماره پارتیشن های دیسک است.
+\footnote{در ارتباط با درایو و پارتیشن ها در لینک روبرو به طور کامل توضیح داده ایم
+\href{http://www.linuxfedora.ir/topic-t12.html\#p13}{http://opizo.com/Eq0VUT}
+}
+\section{اتصال درایو ها و پارتیشن ها}\label{se-46}\index{درایو}\index{پارتیشن}\index{اتصال}\index{mount}
+اتصال درایو و پارتیشن ها در لینوکس بسیار راحت است حتی شما میتوانید بر روی پارتیشن ها محدودیت هم قرار دهید به عنوان مثال فقط خواندنی کردن پارتیشن یا اینکه فقط کاربر خاصی بتواند آنرا باز کند یا حتی میتوانید عمل اتصال
+\textbf{\lr{mount point}}
+را خودکار کنید که در بخش
+\ref{se-461}
+آنرا آموزش داده ایم
+بصورت پیش فرض در میزکار 
+\textbf{xfce}\index{xfce}
+تمام درایو های متصل به رایانه شما روی
+\textbf{Desktop}
+و همچنین در فایل منیجر نشان داده میشوند.تصویر
+\ref{pic-55}
+را مشاهده کنید
+	\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{اتصال درایو}
+	\begin{center}
+		\includegraphics[width=8cm]{pic/ch05/ch05-19.png}
+	\end{center}
+	\label{pic-55}
+\end{figure}
+همانطور که در تصویر
+\ref{pic-55}
+ممکن است دیده باشید درایو نشان داده شده به رنگ خاکستری است, به این معنی که به طور پیش فرض متصل نشده است. برای اتصال درایو در لینوکس فدورا, روی درایو مورد نظر دوبار کلیک کنید و رمز عبور حساب کاربری خود را تایپ کنید, اتصال درایوها نیاز به اجازه مدیریتی دارد.
+	\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{رمز برای اتصال درایو}
+	\begin{center}
+		\includegraphics[width=8cm]{pic/ch05/ch05-20.png}
+	\end{center}
+	\label{pic-56}
+\end{figure}
+پس از اتصال آیکون درایو فقط این را نشان میدهد(که دیگر به رنگ خاکستری) نیست شما هم اکنون میتوانید از آن استفاده کنید.
+	\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{اتصال درایو ۲}
+	\begin{center}
+		\includegraphics[width=8cm]{pic/ch05/ch05-21.png}
+	\end{center}
+	\label{pic-57}
+\end{figure}
+\subsection{اتصال خودکار درایو ها و پارتیشن ها برای همه کاربران}\label{se-461}\index{درایو}\index{پارتیشن}\index{اتصال}\index{mount}\index{اتصال خودکار}\index{Automount}
+یک راه آسان تر برای اتصال درایوها در لینوکس این است که آنها را به محض وصل کردن به سیستم بصورت خودکار متصل کنیم و تمام کاربران اجازه نوشتن و خواندن را داشته باشند.
+در این بخش به شما طریقه خودکار کردن اتصال درایو با امکان خواندن ونوشتن برای تمام کاربران را آموزش میدهیم
+\begin{enumerate}
+	\item[\textbf{قدم اول:}] 
+	در اولین قدم تصمیم داریم یک پوشه اختصاصی برای اتصال درایو شروع کنیم پس ترمینال را باز کنید و دستور زیر را در آن وارد کنید
+	
+				\xmybox[blue]{\lr{sudo mkdir /mnt/disk1}}
+				
+	ما در پوشه 
+	\textbf{mnt}			
+	یک پوشه ساختیم به اسم
+	\textbf{disk1}
+برای ادامه به آدرس زیر مراجعه کنید
+	
+		\begin{tikzcd}
+	Accessories \ar[r, red] & Disks
+	\end{tikzcd}
+	
+	بعد از اجرا همانند تصویر
+	\ref{pic-58}
+	اقدام و گزینه 
+	\textbf{\lr{Edit Mount Options}}
+	را انتخاب کنید
+	\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{پنجره دیسک ۱}
+	\begin{center}
+		\includegraphics[width=8cm]{pic/ch05/ch05-22.png}
+	\end{center}
+	\label{pic-58}
+\end{figure}
+\item[\textbf{قدم دوم:}] 
+اقدامات زیر را به ترتیب در پنجره باز شده انجام دهید درتصویر
+\ref{pic-59}	
+قدم ها مشخص شده اند
+\begin{itemize}
+	\item شما 
+	\textbf{\lr{Automatic Mount Options}}
+	را خاموش کنید
+	\item گزینه 
+	\textbf{\lr{Mount at startup}}
+را تیک دار کنید
+\item در کادر مشخص شده در تصویر
+\ref{pic-59}
+دستور زیر را بنویسید
+
+				\xmybox[green]{\lr{users,noexec,nosuid}}
+				
+				\item در بخش 
+				\textbf{\lr{Mount Point}}
+				آدرس پوشه ای که در قدم اول ساختیم را وارد میکنیم 
+				
+								\xmybox[blue]{\lr{ /mnt/disk1}}
+								\item در بخش 
+								\textbf{\lr{Identify As}}
+								اسم هارد خود را انتخاب کنید برای راحتی میتوانید از منوی کشویی هم کمک بگیرید
+								\item در کادر
+								\textbf{\lr{Filesystem}}
+								فایل سیستم هارد خود را انتخاب کنید میتوانید بنویسید
+								\textbf{auto}
+								یا برای لینوکس 
+								\textbf{\lr{ext4}}
+								و برای ویندوز
+								\textbf{ntfs}
+								بنویسید								
+\end{itemize}
+	\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{پنجره دیسک ۲}
+	\begin{center}
+		\includegraphics[width=8cm]{pic/ch05/ch05-23.png}
+	\end{center}
+	\label{pic-59}
+\end{figure}
+در صورتی که دوست دارید میتوانید برای درایو خود یک اسم انتخاب کنید تا راحت تر بتوانید آنرا شناسایی کنید پس میتوانید در کادر
+\textbf{\lr{Display Name}}
+یک اسم برای هارد خود انتخاب کنید ما اسم 
+\textbf{\lr{Data Storage 1}}
+را انتخاب کردیم تصویر
+\ref{pic-60}
+را مشاهده کنید
+	\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{پنجره دیسک ۳}
+	\begin{center}
+		\includegraphics[width=8cm]{pic/ch05/ch05-24.png}
+	\end{center}
+	\label{pic-60}
+\end{figure}
+بر روی 
+\textbf{ok}
+کلیک کنید
+و در پنجره باز شده رمز حساب کاربری خود را وارد کنید
+درنهایت میتوانید کامپیوتر خود را ریستارت کنید یا درایو را به صورت دستی متصل کنید تا نیازی به ریستارت نباشد. درایو پیکربندی شده و به طور خودکار در هر راه اندازی مجدد در دسترس است تمام کاربران قادر به خواندن و نوشتن روی درایو خواهند بود و نیازی به وارد کردن رمز نخواهد بود برای اتصال درایو بصورت دستی بر روی
+\textbf{\lr{Mount selected partition}}
+یا مثلث کوچک کلیک کنید همانند
+تصویر
+\ref{pic-61}
+	\begin{figure}[H]%ejbar shekl baray gharar gereftan zire matn
+	\caption{پنجره دیسک ۴}
+	\begin{center}
+		\includegraphics[width=8cm]{pic/ch05/ch05-25.png}
+	\end{center}
+	\label{pic-61}
+\end{figure}
+\end{enumerate}
+\subsection{اتصال خودکار پارتیشن های ویندوزبرای همه کاربران}\label{se-462}\index{درایو}\index{پارتیشن}\index{اتصال}\index{mount}\index{اتصال خودکار}\index{Automount}\index{ویندوز}\index{windows}
+تمام مراحل با بخش
+\ref{se-461}
+یکسان است فقط باید در قسمت فایل سیستم بنویسیم
+\textbf{ntfs}
+اگر به تصویر 
+\ref{pic-60}
+دقت کنید منظور ما از فایل سیستم کادر ۶ در تصویر است
+\subsection{کنترل دسترسی به درایو های متصل شده}\label{se-463}\index{درایو}\index{پارتیشن}\index{اتصال}\index{mount}
+معمولا, شما میخواهید در لینوکس فدورا درایوها را متصل کنید و آنها را در دسترس همه کاربران قرار دهید. اما زمانهایی وجود دارد که کنترل دسترسی به آن درایوها ضروری میشود. برای مثال ممکن است بخواهید یک درایو ویندوزی را در هنگام راه اندازی خودکار متصل شود, اما نمیتوانید از تغییر محتویات آن درایو جلوگیری کنید. یا شاید شما دوست نداشته باشید بقیه کاربران محتویات آن را مشاهده کنند. یک راه ساده و در عین حال موثر برای انجام این کار در زمان اتصال درایوها یا پارتیشن ها استفاده از
+\textbf{\lr{gid,uid,umask}}
+است.
+\begin{itemize}
+	\item [\textbf{:uid}]
+	یک شناسه کاربری با یک عدد صحیح مثبت منحصر به فرد است که توسط سیستم عامل لینوکس به هر کاربر اختصاص داده شده است هر کاربر به وسیله یک
+	\textbf{uid}
+	به سیستم شناسایی میشود و نام کاربری یک رابط کاربری ساده برای استفاده انسان است. همین امر برای
+	\textbf{gid}
+	هم صادق است اما به جای کاربران, گروه ها را نشان میدهد.
+	\item[\textbf{:umask}] 
+	مخفف 
+	\textbf{\lr{user file creation mode mask}}
+	 میباشد. 
+	 \textbf{umask}
+	  در خانواده های یونیکس و لینوکس یک متغییر محیطی است که مجوز دسترسی فایل و دایرکتوری هایی که جدیدا ساخته میشوند را تعیین میکند و به عبارت دیگر بواسطه 
+	  	 \textbf{umask}
+	   میتوانیم مجوز دسترسی فایل های جدید را شناسایی کنیم. 
+	   \footnote{در لینک زیر بصورت کامل umask را بررسی کرده ایم
+	\href{http://www.linuxfedora.ir/umask-t186.html}{http://opizo.com/BptH6u}   
+   }
+\end{itemize}
+\begin{enumerate}
+	\item[\textbf{قدم اول:}]
+	در این مرحله نیاز به دانستن
+	\textbf{\lr{uid/gid}}
+	حساب کاربریتان است تا بتوانیم محدودیت های لازم را اعمال کنیم به عنوان مثال نام کاربری ما
+
+	
+\end{enumerate}

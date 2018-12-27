@@ -1,0 +1,99 @@
+
+%alireza jahani fard
+%gap:@fedora
+%email:alireza@jahanifard.ir
+\documentclass[12pt]{book}
+\setlength\paperheight {23.5cm}
+\setlength\paperwidth {16.7cm}
+\usepackage[top=3.5cm, bottom=3.5cm]{geometry}
+\usepackage{amssymb}
+\usepackage{paralist}
+%vared kardane pdf
+\usepackage{pdfpages}
+%afzodan maraje va namaye dar fehrest
+\usepackage[nottoc]{tocbibind}
+\usepackage{makeidx}
+%gharar dadane kadr
+\usepackage{tcolorbox}
+%diagram va rasme shekl
+\usepackage{tikz-cd}
+%afzodan aks
+\usepackage{graphicx}
+\usepackage{listings}
+%ejbar namayesh aks zire matn
+\usepackage{float}
+%gharar dadane pavaraghi da selole jadval
+\usepackage{tablefootnote}
+\makeindex
+\usepackage{hyperref}
+\hypersetup{colorlinks,%
+citecolor=green,%
+filecolor=magneta,%
+linkcolor=red,%
+urlcolor=cyan,%
+}
+%\hypersetup{colorlinks=true,linkcolor=red,citecolor=green,%
+%	filecolor=magneta,urlcolor=cyan}
+%baste gharar dadane tah barg
+\usepackage{fancyhdr}
+\usepackage{xepersian}
+\settextfont{XB Kayhan}
+\setlatintextfont[ExternalLocation,BoldFont={lmroman10-bold},BoldItalicFont={lmroman10-bolditalic},ItalicFont={lmroman10-italic}]{lmroman10-regular}
+\setdigitfont{XB Yas}
+\defpersianfont\nast{IranNastaliq}
+\title{فدورا برای تازه کارها}
+\author{علیرضا جهانی فرد}
+%gharar dadane tah barg
+\pagestyle{fancy}
+%\lfoot{\color{blue} $www.linuxfedora.ir$}
+%\cfoot{\color{green}فدورا برای تازه کارها}
+%\rfoot{\color{red}نویسنده:علیرضا جهانی فرد}
+%\renewcommand{\headrulewidth}{2pt}
+%\renewcommand{\footrulewidth}{3pt}
+%\lhead{\thepage}
+%%%%%%%%%%%%%%%%%%%%%%
+%dastor mianbor baray pavaraghi latin va persian
+\newcommand{\fp}{\footnote}
+\newcommand{\fl}{\LTRfootnote}
+\begin{document}
+\newpage
+\maketitle
+\tableofcontents
+\listoffigures
+\listoftables
+%taghir name marja
+\renewcommand{\bibname}{مراجع}
+\newtheorem{attention}{توجه}
+\newtheorem{remark}{ملاحظه}
+\newtheorem{example}{مثال}
+\newtcbox{\xmybox}[1][red]{on line,
+	arc=7pt,colback=#1!10!white,colframe=#1!50!black,
+	before upper={\rule[-3pt]{0pt}{10pt}},boxrule=1pt,
+	boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt}
+\newtcbox{\mybox}[1][red]{on line,
+	arc=0pt,outer arc=0pt,colback=#1!10!white,colframe=#1!50!black,
+	boxsep=0pt,left=1pt,right=1pt,top=2pt,bottom=2pt,
+	boxrule=0pt,bottomrule=1pt,toprule=1pt}
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
+\printindex
+\begin{thebibliography}{999}
+\bibitem{sta-fedora}
+بر اساس میزان دانلود ارائه شده در سایت 
+\href{https://fedoraproject.org/wiki/Statistics_charts}{fedoraproject.org}
+\bibitem{ubuntu}
+اوبونتو برای تازه واردها - نویسندگان:ساسان نمیرانیان - نوا اژدری - احمد صوفی محمودی - سال انتشار:۱۳۹۳
+\bibitem{wiki-fedora}
+سایت ویکی پدیا انگلیسی
+\href{https://en.wikipedia.org/wiki/Fedora_(operating_system)}{http://opizo.com/6tj3Jv}
+\bibitem{install-fedora}
+آموزش نصب فدورا ۲۰ 
+\href{http://fedorafans.com/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d9%86%d8%b5%d8%a8-fedora20/}{http://opizo.com/0KgRga}
+\bibitem{mail-reader}
+معرفی نرم افزار مدیریت ایمیل FossaMail
+\href{http://shatelland.com/key/94443}{http://opizo.com/VaHFJj}
+\end{thebibliography}
+\end{document}
